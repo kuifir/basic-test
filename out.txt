@@ -1,0 +1,2 @@
+一个字符串
+IOTest.StreamTest.RedirectOut@4554617c

@@ -1,0 +1,50 @@
+package ThreadT.conditionT;
+
+
+
+/**
+ * Package:ThreadT.condition;
+ * <p>
+ * Description： 事务测试使用的类
+ * <p>
+ * Author: baci
+ * <p>
+ * Date: Created in 2020/7/29 19:21
+ * <p>
+ * Version: 0.0.1
+ */
+public class DepositThread extends Thread{
+
+    private Account account;
+    private Double depositAmount;
+    @Override
+    public void run() {
+        for (int b = 0; b <10; b++) {
+            System.out.println(Thread.currentThread().getName()+"DepositThread第"+(b+1)+"次运行");
+            account.deposit(depositAmount);
+            System.out.println(Thread.currentThread().getName()+"DepositThread第"+(b+1)+"次运行结束");
+        }
+    }
+    public DepositThread(String name, Account account, Double depositAmount) {
+        super(name);
+        this.account = account;
+        this.depositAmount = depositAmount;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
+    public void setDrawAmount(Double drawAmount) {
+        this.depositAmount = drawAmount;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public Double getDrawAmount() {
+        return depositAmount;
+    }
+
+}

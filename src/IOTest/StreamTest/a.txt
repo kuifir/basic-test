@@ -1,0 +1,3 @@
+键盘输入的内容为---
+键盘输入的内容为---IOTest.StreamTest.WriteToProcess Words
+键盘输入的内容为---WriteToProcess@15db9742
